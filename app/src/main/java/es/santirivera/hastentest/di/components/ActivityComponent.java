@@ -9,6 +9,8 @@ import es.santirivera.domain.use_cases.base.UseCaseHandler;
 import es.santirivera.domain.use_cases.providers.UseCaseProvider;
 import es.santirivera.hastentest.base.activity.BaseActivity;
 import es.santirivera.hastentest.base.app.AndroidApplication;
+import es.santirivera.hastentest.base.interfaces.BaseNavigation;
+import es.santirivera.hastentest.base.presenter.BasePresenter;
 import es.santirivera.hastentest.di.modules.ActivityModule;
 import es.santirivera.hastentest.di.modules.ApplicationModule;
 import es.santirivera.hastentest.di.modules.DomainModule;
@@ -29,6 +31,7 @@ import es.santirivera.hastentest.di.modules.WebServicesModule;
 public interface ActivityComponent {
 
     void inject(BaseActivity activity);
+    void inject(BasePresenter<BaseNavigation> presenter);
 
     // Exported to child components
     AndroidApplication application();
